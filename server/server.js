@@ -9,11 +9,14 @@ const PORT = process.env.PORT || 5000
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 app.use(express.static("public"));
+app.use(cors());
 
 // connect to the mongodb database
-/* connectDB() */
+connectDB()
 
 app.use('/api/items', require("./routes/items"))
-app.use('/api/payment', cors(), require("./routes/payment"))
+app.use('/api/payment', require("./routes/payment"))
 
 app.listen(PORT, console.log("Server is running on port ", PORT))
+
+module.exports = app;

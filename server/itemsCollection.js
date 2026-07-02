@@ -1493,6 +1493,7 @@ const itemsCollection = [
         ],
         "createdAt": "2022-08-29T14:28:06.542Z",
         "updatedAt": "2022-08-29T14:28:06.542Z",
-        "__v": 0
     }
 ]
+
+module.exports = itemsCollection;
