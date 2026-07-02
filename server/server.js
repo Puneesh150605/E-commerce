@@ -17,6 +17,10 @@ connectDB()
 app.use('/api/items', require("./routes/items"))
 app.use('/api/payment', require("./routes/payment"))
 
+app.get('/', (req, res) => {
+    res.json({ status: "success", message: "SHEMA E-Commerce Backend API is Live and Running!" });
+});
+
 app.listen(PORT, console.log("Server is running on port ", PORT))
 
 module.exports = app;
